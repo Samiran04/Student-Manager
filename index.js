@@ -24,6 +24,18 @@ app.get('/',function (req,res){
     });
 });
 
+app.get('/Delete-data',function(req,res){
+    const id=req.query.id;
+    Model.findByIdAndDelete(id,function(err){
+        if(err)
+        {
+            console.log(`Error while deleting data ${err}`);
+            return;
+        }
+        return res.redirect('back');
+    });
+});
+
 app.post('/Enter-data',function (req,res){
     Model.create({
         dis:req.body.dis,
