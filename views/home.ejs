@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>locals.title</title>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <form action="Enter-data" method="POST">
+            <h3>DISCRIPTION</h3>
+            <input type="text" name="dis">
+            <label>
+                <select name="cat" >
+                    <option value="Personal">Pesonal</option>
+                    <option value="General">General</option>
+                </select>
+            </label>
+            <input type="date" name="date">
+            <button type="submit">Submit</button>
+        </form>
+        <ul>
+            <% for(let i of MyList){ %>
+            <li><%= i.dis %></li>
+            <li><%= i.cat %></li>
+            <li><%= i.date %></li>
+            <% } %>
+        </ul>
+    </body>
+</html>
