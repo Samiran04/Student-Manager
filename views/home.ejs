@@ -4,12 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
-        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/8abc686f76.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
+        <h1 class="center">Todo App</h1>
+        <div id="Main">
+        <div>
+        <div>
         <form action="Enter-data" method="POST">
             <div>
             <p>DISCRIPTION<p>
@@ -21,7 +24,10 @@
             <label>
                 <select name="cat" >
                     <option value="Personal">Pesonal</option>
-                    <option value="General">General</option>
+                    <option value="School">School</option>
+                    <option value="Work">Work</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Others</option>
                 </select>
             </label>
                 </div>
@@ -32,25 +38,32 @@
             </div>
                 <button type="submit" class="btn btn-secondary">Add</button>
         </form>
+    </div>
+    <div>
         <ul class="remove-dots">
             <form action="/Delete-data" method="GET">
                 <div><button type="submit" class="btn btn-danger">Delete</button></div>
                 <div class="flex">
                 <% for(let i of MyList){ %>
-                    <div class="inline-block">
-                        <div class="form-check inline-block">
-                            <input class="form-check-input" name="id" type="checkbox" value="<%= i._id %>" id="flexCheckDefault">
-                          </div>
-                        <li class="inline"><%= i.dis %></li>
-                        <li><%= i.date %></li>
-                    </div>
-                    <div class="inline-block" id="Category">
-                        <li><button class="btn btn-primary" type="button"><%= i.cat %></button></li>
+                    <div>
+                        <div class="inline-block">
+                            <div class="form-check inline-block">
+                                <input class="form-check-input" name="id" type="checkbox" value="<%= i._id %>" id="flexCheckDefault">
+                            </div>
+                            <li class="inline"><%= i.dis %></li>
+                            <li><%= i.date %></li>
+                        </div>
+                        <div class="inline-block" id="Category">
+                            <li><button class="btn btn-primary" type="button"><%= i.cat %></button></li>
+                        </div>
                     </div>
             <% } %>
                 </div>
             </form>
         </ul>
+        </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        </div>
     </body>
 </html>

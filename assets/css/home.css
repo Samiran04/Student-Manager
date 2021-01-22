@@ -1,3 +1,10 @@
+#Main{
+    display: flex;
+    justify-content: center;
+}
+.center{
+    text-align: center;
+}
 .set-width{
     width:100%;
 }
@@ -12,6 +19,7 @@
 }
 .flex{
     display: flex;
+    flex-direction: column;
 }
 .remove-left-margin{
     margin: 0px;
