@@ -1,3 +1,18 @@
-body{
-    background-color: darkcyan;
+.set-width{
+    width:100%;
+}
+.inline-block{
+    display: inline-block;
+}
+.remove-dots{
+    list-style-type: none;
+}
+.inline{
+    display: inline;
+}
+.flex{
+    display: flex;
+}
+.remove-left-margin{
+    margin: 0px;
 }
