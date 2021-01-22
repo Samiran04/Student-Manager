@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>locals.title</title>
+        <title><%= locals.title %></title>
         <script src="https://kit.fontawesome.com/8abc686f76.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/home.css">
     </head>
@@ -18,12 +18,15 @@
             <button type="submit">Submit</button>
         </form>
         <ul>
-            <% for(let i of MyList){ %>
-            <li><%= i.dis %></li>
-            <li><%= i.cat %></li>
-            <li><%= i.date %></li>
-            <a href="/Delete-data/?id=<%= i._id %>"><i class="fas fa-window-close"></i></a>
+            <form action="/Delete-data" method="GET">
+                <% for(let i of MyList){ %>
+                <li><%= i.dis %></li>
+                <li><%= i.cat %></li>
+                <li><%= i.date %></li>
+                <input type="checkbox" name="id" value="<%= i._id %>">
             <% } %>
+            <input type="submit" value="Delete Todo"/>
+            </form>
         </ul>
     </body>
 </html>

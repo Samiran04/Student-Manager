@@ -26,14 +26,24 @@ app.get('/',function (req,res){
 
 app.get('/Delete-data',function(req,res){
     const id=req.query.id;
-    Model.findByIdAndDelete(id,function(err){
+    console.log(id);
+     Model.findByIdAndDelete(id,function(err){
         if(err)
         {
             console.log(`Error while deleting data ${err}`);
             return;
         }
+         return res.redirect('back');
+     });
+
+    /*Model.deleteMany({_id:{$in:id}},(err,todo)=>{
+        if(err){
+            console.log(`Error while deleting data ${err}`);
+           return;
+        }
         return res.redirect('back');
-    });
+
+    })*/
 });
 
 app.post('/Enter-data',function (req,res){
