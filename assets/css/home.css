@@ -24,3 +24,18 @@
 .remove-left-margin{
     margin: 0px;
 }
+
+.flex-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body{
+    color:gray;
+}
+
+.Main-width{
+    width:35%;
+    font-weight: bolder;
+}
