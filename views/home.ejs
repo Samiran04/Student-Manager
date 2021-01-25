@@ -9,31 +9,31 @@
         <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
-        <h1 class="center">Todo App</h1>
         <div id="Main">
         <div class="Main-width">
+            <h1 class="center">Todo App</h1>
         <div>
         <form action="Enter-data" method="POST">
             <div>
             <p>DISCRIPTION<p>
-            <input type="text" name="dis">
+            <input type="text" name="dis" placeholder="What do you need to do?" class="remove-border" id="form-1" required>
             </div>
             <div class="set-width">
-                <div class="inline-block">
+                <div class="inline-block width-50">
                 <p>Category<p>
-            <label>
-                <select name="cat" >
-                    <option value="Personal">Pesonal</option>
-                    <option value="School">School</option>
-                    <option value="Work">Work</option>
-                    <option value="Cleaning">Cleaning</option>
-                    <option value="Other">Others</option>
-                </select>
-            </label>
+                <label>
+                    <select name="cat" class="remove-border width-250">
+                        <option value="Personal">Pesonal</option>
+                        <option value="School">School</option>
+                        <option value="Work">Work</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Others</option>
+                    </select>
+                </label>
                 </div>
                 <div class="inline-block">
                 <p>DATE</p>
-                <input type="date" name="date">
+                    <input type="date" name="date" class="remove-border width-137">
             </div>
             </div>
                 <button type="submit" class="btn btn-secondary">Add</button>
@@ -42,7 +42,7 @@
     <div>
             <form action="/Delete-data" method="GET">
                 <div><button type="submit" class="btn btn-danger">Delete</button></div>
-                <div class="flex">
+                <div class="flex" id ="main-last">
                 <% for(let i of MyList){ %>
                     <div class="flex-col">
                         <div class="inline-block">
@@ -50,7 +50,7 @@
                                 <input class="form-check-input" name="id" type="checkbox" value="<%= i._id %>" id="flexCheckDefault">
                             </div>
                             <p class="inline-block"><%= i.dis %></p`>
-                            <p><%= i.date %></p>
+                            <p><i class="far fa-calendar-alt"><%= i.date %></i></p>
                         </div>
                         <div class="inline-block" id="Category">
                             <p><button class="btn btn-primary" type="button"><%= i.cat %></button></p>

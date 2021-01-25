@@ -1,6 +1,7 @@
 #Main{
     display: flex;
     justify-content: center;
+    background-color: gray;
 }
 .center{
     text-align: center;
@@ -36,6 +37,38 @@ body{
 }
 
 .Main-width{
-    width:35%;
+    width:40%;
     font-weight: bolder;
+    background-color: white;
+    padding: 35px;
+}
+
+.remove-border{
+    border: white;
+}
+
+.remove-border:focus{
+    border: whitesmoke;
+    border: none;
+    outline: none;
+}
+
+#form-1{
+    width: 60%;
+}
+
+.width-50{
+    width:50%
+}
+
+.width-250{
+    width:250%
+}
+
+.width-137{
+    width:137%
+}
+
+#main-last{
+    margin-top: 20px;
 }
