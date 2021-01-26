@@ -54,7 +54,7 @@ body{
 }
 
 #form-1{
-    width: 60%;
+    width: 100%;
 }
 
 .width-50{
@@ -71,4 +71,16 @@ body{
 
 #main-last{
     margin-top: 20px;
+}
+
+.hover-prop:hover{
+    background-color: whitesmoke;
+}
+
+#form-1:focus{
+    background-color: whitesmoke;
+}
+
+.inline{
+    display: inline;
 }

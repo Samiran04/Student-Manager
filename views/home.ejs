@@ -11,15 +11,15 @@
     <body>
         <div id="Main">
         <div class="Main-width">
-            <h1 class="center">Todo App</h1>
+            <h1 class="center">TODO App</h1>
         <div>
         <form action="Enter-data" method="POST">
-            <div>
+            <div id="test" class="hover-prop">
             <p>DISCRIPTION<p>
             <input type="text" name="dis" placeholder="What do you need to do?" class="remove-border" id="form-1" required>
             </div>
             <div class="set-width">
-                <div class="inline-block width-50">
+                <div class="inline-block width-50 hover-prop">
                 <p>Category<p>
                 <label>
                     <select name="cat" class="remove-border width-250">
@@ -31,7 +31,7 @@
                     </select>
                 </label>
                 </div>
-                <div class="inline-block">
+                <div class="inline-block hover-prop">
                 <p>DATE</p>
                     <input type="date" name="date" class="remove-border width-137">
             </div>
@@ -48,9 +48,9 @@
                         <div class="inline-block">
                             <div class="form-check inline-block">
                                 <input class="form-check-input" name="id" type="checkbox" value="<%= i._id %>" id="flexCheckDefault">
+                                <p class="inline-block"><%= i.dis %></p>
                             </div>
-                            <p class="inline-block"><%= i.dis %></p`>
-                            <p><i class="far fa-calendar-alt"><%= i.date %></i></p>
+                            <p><i class="far fa-calendar-alt"></i><%= i.date %></p>
                         </div>
                         <div class="inline-block" id="Category">
                             <p><button class="btn btn-primary" type="button"><%= i.cat %></button></p>
