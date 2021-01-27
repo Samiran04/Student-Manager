@@ -77,10 +77,27 @@ body{
     background-color: whitesmoke;
 }
 
-#form-1:focus{
-    background-color: whitesmoke;
-}
-
 .inline{
     display: inline;
+}
+
+.fix-width{
+    width: 100px;
+}
+
+.border-top{
+    border-top:1px black solid;
+}
+
+.top-gap{
+    margin-top: 17px;
+}
+
+.up-down-border{
+    border-top:1px black solid;
+    border-bottom:1px black solid;
+}
+
+.border-bottom{
+    border-bottom:1px black solid;
 }
