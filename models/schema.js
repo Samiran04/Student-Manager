@@ -1,4 +1,6 @@
 const mongoose=require('mongoose');
+
+//creating our Schema
 const schema=new mongoose.Schema({
     dis:{
         type:String,
@@ -12,5 +14,9 @@ const schema=new mongoose.Schema({
         required:true
     }
 });
+
+//creating out model with schema
 const Model=mongoose.model('Model',schema);
+
+
 module.exports=Model;
